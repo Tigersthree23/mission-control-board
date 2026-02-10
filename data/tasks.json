@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": "mc_001",
+      "title": "欢迎使用 Mission Control",
+      "description": "这是一个示例任务。你可以通过Web UI或CLI管理任务。",
+      "status": "backlog",
+      "priority": "low",
+      "subtasks": [],
+      "dod": "任务完成标准",
+      "comments": [],
+      "createdAt": "2026-02-10T14:00:00Z",
+      "updatedAt": "2026-02-10T14:00:00Z"
+    }
+  ]
+}

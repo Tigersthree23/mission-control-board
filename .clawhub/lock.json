@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "local-rag-search": {
+      "version": "0.1.0",
+      "installedAt": 1770529574032
+    },
+    "elite-longterm-memory": {
+      "version": "1.2.2",
+      "installedAt": 1770529758366
+    },
+    "cron-scheduling": {
+      "version": "1.0.0",
+      "installedAt": 1770530241461
+    },
+    "mission-control": {
+      "version": "2.2.1",
+      "installedAt": 1770530244861
+    },
+    "openclaw-auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1770530246906
+    }
+  }
+}
