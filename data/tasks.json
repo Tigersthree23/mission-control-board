@@ -284,7 +284,7 @@
       "title": "🎯 学习Mission Control功能",
       "description": "这是一个示例任务，帮助你熟悉Mission Control的功能。\n\n**任务目标**：\n1. 了解Mission Control的各个功能\n2. 学会使用Dashboard和命令行工具\n3. 体验自动化任务执行\n\n**建议步骤**：\n- 从第一个subtask开始\n- 逐步完成每个subtask\n- 观察任务状态的变化\n- 尝试添加评论和更新",
       "status": "backlog",
-      "priority": "medium",
+      "priority": "high",
       "project": "demo",
       "tags": [
         "demo",
