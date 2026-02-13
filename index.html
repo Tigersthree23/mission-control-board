@@ -2805,221 +2805,28 @@
             }
         }
 // === EMBEDDED DATA (fallback when not logged in) ===
-        const FALLBACK_DATA = {
-            tasks: [
-                // === PERMANENT (recurring tasks) ===
-                {
-                    id: "task_p01",
-                    title: "Weekly backup check",
-                    description: "Verify all automated backups completed successfully",
-                    status: "permanent",
-                    project: "devops",
-                    tags: ["devops", "maintenance"],
-                    subtasks: [
-                        { id: "sub_001", title: "Check database backups", done: false },
-                        { id: "sub_002", title: "Verify file storage sync", done: false },
-                        { id: "sub_003", title: "Test restore procedure", done: false }
-                    ],
-                    priority: "high",
-                    createdAt: "2026-01-15T09:00:00Z"
-                },
-                {
-                    id: "task_p02",
-                    title: "Review analytics dashboard",
-                    description: "Check KPIs and identify trends or anomalies",
-                    status: "permanent",
-                    project: "growth",
-                    tags: ["growth", "analytics"],
-                    subtasks: [],
-                    priority: "medium",
-                    createdAt: "2026-01-15T09:00:00Z"
-                },
-                // === BACKLOG ===
-                {
-                    id: "task_001",
-                    title: "Redesign landing page",
-                    description: "Modern refresh with improved conversion focus and mobile-first approach",
-                    status: "backlog",
-                    project: "design",
-                    tags: ["design", "growth"],
-                    subtasks: [
-                        { id: "sub_001", title: "Competitor analysis", done: false },
-                        { id: "sub_002", title: "Wireframe concepts", done: false },
-                        { id: "sub_003", title: "Design mockups", done: false },
-                        { id: "sub_004", title: "Get stakeholder feedback", done: false }
-                    ],
-                    priority: "high",
-                    createdAt: "2026-01-20T10:00:00Z"
-                },
-                {
-                    id: "task_002",
-                    title: "Plan weekend hiking trip",
-                    description: "Research trails, check weather, prepare gear for Saturday adventure",
-                    status: "backlog",
-                    project: "personal",
-                    tags: ["personal", "wellness"],
-                    subtasks: [
-                        { id: "sub_001", title: "Choose trail (moderate difficulty)", done: false },
-                        { id: "sub_002", title: "Check weather forecast", done: false },
-                        { id: "sub_003", title: "Pack essentials", done: false }
-                    ],
-                    priority: "low",
-                    createdAt: "2026-01-25T18:00:00Z"
-                },
-                {
-                    id: "task_003",
-                    title: "Set up CI/CD pipeline",
-                    description: "Automate testing and deployment for the main project repository",
-                    status: "backlog",
-                    project: "devops",
-                    tags: ["devops", "automation"],
-                    subtasks: [
-                        { id: "sub_001", title: "Configure GitHub Actions", done: false },
-                        { id: "sub_002", title: "Add test coverage reports", done: false },
-                        { id: "sub_003", title: "Set up staging environment", done: false },
-                        { id: "sub_004", title: "Document deployment process", done: false }
-                    ],
-                    priority: "high",
-                    createdAt: "2026-01-22T14:00:00Z"
-                },
-                {
-                    id: "task_004",
-                    title: "Research email automation tools",
-                    description: "Compare options for newsletter and drip campaigns",
-                    status: "backlog",
-                    project: "growth",
-                    tags: ["growth", "research"],
-                    subtasks: [],
-                    priority: "medium",
-                    createdAt: "2026-01-24T11:00:00Z"
-                },
-                // === IN PROGRESS ===
-                {
-                    id: "task_005",
-                    title: "Implement dark mode",
-                    description: "Add theme toggle with system preference detection and persistence",
-                    status: "in_progress",
-                    project: "devops",
-                    tags: ["devops", "design"],
-                    subtasks: [
-                        { id: "sub_001", title: "Define color variables", done: true },
-                        { id: "sub_002", title: "Create theme toggle component", done: true },
-                        { id: "sub_003", title: "Persist preference in localStorage", done: false },
-                        { id: "sub_004", title: "Test across browsers", done: false }
-                    ],
-                    priority: "medium",
-                    createdAt: "2026-01-23T09:00:00Z"
-                },
-                {
-                    id: "task_006",
-                    title: "Write Q1 blog post",
-                    description: "Industry trends article for company blog, target 1500 words",
-                    status: "in_progress",
-                    project: "growth",
-                    tags: ["growth", "content"],
-                    subtasks: [
-                        { id: "sub_001", title: "Outline key points", done: true },
-                        { id: "sub_002", title: "Write first draft", done: true },
-                        { id: "sub_003", title: "Add visuals and examples", done: false },
-                        { id: "sub_004", title: "SEO optimization", done: false }
-                    ],
-                    priority: "medium",
-                    createdAt: "2026-01-21T10:00:00Z"
-                },
-                {
-                    id: "task_007",
-                    title: "Organize home office",
-                    description: "Declutter desk, improve cable management, add plants",
-                    status: "in_progress",
-                    project: "personal",
-                    tags: ["personal", "wellness"],
-                    subtasks: [
-                        { id: "sub_001", title: "Sort through papers", done: true },
-                        { id: "sub_002", title: "Order cable organizers", done: true },
-                        { id: "sub_003", title: "Buy desk plant", done: false }
-                    ],
-                    priority: "low",
-                    createdAt: "2026-01-26T15:00:00Z"
-                },
-                // === REVIEW ===
-                {
-                    id: "task_008",
-                    title: "API documentation update",
-                    description: "Complete overhaul of REST API docs with examples and error codes",
-                    status: "review",
-                    project: "devops",
-                    tags: ["devops", "documentation"],
-                    subtasks: [
-                        { id: "sub_001", title: "Document all endpoints", done: true },
-                        { id: "sub_002", title: "Add request/response examples", done: true },
-                        { id: "sub_003", title: "Include authentication guide", done: true },
-                        { id: "sub_004", title: "Peer review", done: false }
-                    ],
-                    priority: "high",
-                    createdAt: "2026-01-18T09:00:00Z"
-                },
-                {
-                    id: "task_009",
-                    title: "New logo concepts",
-                    description: "Three variations for brand refresh, awaiting team vote",
-                    status: "review",
-                    project: "design",
-                    tags: ["design", "branding"],
-                    subtasks: [
-                        { id: "sub_001", title: "Minimalist version", done: true },
-                        { id: "sub_002", title: "Bold/modern version", done: true },
-                        { id: "sub_003", title: "Classic refined version", done: true }
-                    ],
-                    priority: "medium",
-                    createdAt: "2026-01-19T11:00:00Z"
-                },
-                // === DONE ===
-                {
-                    id: "task_010",
-                    title: "Fix login redirect bug",
-                    description: "Users were redirected to wrong page after OAuth login",
-                    status: "done",
-                    project: "devops",
-                    tags: ["devops", "bugfix"],
-                    subtasks: [
-                        { id: "sub_001", title: "Reproduce issue", done: true },
-                        { id: "sub_002", title: "Identify root cause", done: true },
-                        { id: "sub_003", title: "Implement fix", done: true },
-                        { id: "sub_004", title: "Write regression test", done: true }
-                    ],
-                    priority: "high",
-                    createdAt: "2026-01-17T08:00:00Z"
-                },
-                {
-                    id: "task_011",
-                    title: "Quarterly tax prep",
-                    description: "Gather documents and submit to accountant",
-                    status: "done",
-                    project: "personal",
-                    tags: ["personal", "finance"],
-                    subtasks: [
-                        { id: "sub_001", title: "Export bank statements", done: true },
-                        { id: "sub_002", title: "Organize receipts", done: true },
-                        { id: "sub_003", title: "Send to accountant", done: true }
-                    ],
-                    priority: "high",
-                    createdAt: "2026-01-10T09:00:00Z"
-                },
-                {
-                    id: "task_012",
-                    title: "Social media content calendar",
-                    description: "Plan posts for February across all platforms",
-                    status: "done",
-                    project: "growth",
-                    tags: ["growth", "content"],
-                    subtasks: [
-                        { id: "sub_001", title: "Identify key dates/events", done: true },
-                        { id: "sub_002", title: "Draft post ideas", done: true },
-                        { id: "sub_003", title: "Schedule in buffer", done: true }
-                    ],
-                    priority: "medium",
-                    createdAt: "2026-01-12T14:00:00Z"
+        async function loadTasksFromGitHub() {
+            try {
+                // 从本地tasks.json加载
+                const response = await fetch(TASKS_FILE + '?t=' + Date.now());
+                if (response.ok) {
+                    STATE.data = await response.json();
+                    STATE.data.tasks = STATE.data.tasks || [];
+                    renderTasks();
+                    updateStats();
+                    return;
                 }
+                // 如果加载失败，使用空的数组
+                console.log('加载任务失败，使用空数组');
+                STATE.data = { tasks: [] };
+                STATE.data.tasks = [];
+                renderTasks();
+                updateStats();
+            } catch (error) {
+                console.error('加载任务失败:', error);
+                alert('加载任务失败: ' + error.message);
+            }
+        }
             ],
             projects: [
                 { id: "devops", name: "DevOps", color: "#3b82f6", icon: "💻" },
